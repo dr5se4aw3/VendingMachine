@@ -1,0 +1,35 @@
+.contactform_table tr{
+  height:7rem;
+  border: solid 1px #B1B1B1;
+}
+
+.contactform_table th{
+  width: 150px;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.contactform_table td{
+}
+
+.contactform_table .text{
+  width: 480px;
+}
+
+.contactform{
+  display: table;
+}
+
+.contactform p{
+  text-align: center;
+}
+
+input[type="submit"]{
+  font-family: monospace;
+  border:none;
+  color: #fff;
+  font-size: 3rem;
+  width: 90px;
+  background-color: #8AEDA4;
+
+}
