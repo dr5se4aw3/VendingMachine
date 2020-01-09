@@ -31,5 +31,9 @@ input[type="submit"]{
   font-size: 3rem;
   width: 90px;
   background-color: #8AEDA4;
+}
 
+input[type="submit"]:hover{
+  opacity: 0.5;
+  cursor: pointer;
 }
