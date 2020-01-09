@@ -64,17 +64,36 @@ height: 120px;
 
 /* ここから */
 .function {
+  background-color: #B8B8B8;
+  padding-bottom: 100px;
+}
+
+.function h1{
+  padding-top: 50px;
 }
 
 .function-images {
+  display: table;
+  margin: 0 auto;
 }
 
 .function-image {
+  display: table-cell;
+  width: 200px;
 }
 /* ここまでがfunction部分の実装 */
 
 footer {
 /* footer部分の実装 */
+padding-top: 1rem;
+background-color: #003954;
+color: white;
+}
+
+footer p{
+  margin: 0;
+  padding-top: 1rem;
+  font-size: 0.9rem;
 }
 
 /* ここに書かれているcssの記述はあくまでヒントとして用意された雛形なので、書かれている記述に従わずに実装したいという場合は、自分の好きに実装して構わない。課題要件を満たし、コードの品質が一定の水準にあると判定されればどのような実装でも合格になる。 */
