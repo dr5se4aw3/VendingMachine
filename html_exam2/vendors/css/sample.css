@@ -1,0 +1,58 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.main-header {
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../images/header.jpg");
+  background-attachment: fixed;
+}
+
+/* ここから */
+header {
+}
+
+header ul {
+}
+
+header ul a {
+}
+
+header li {
+}
+
+header ul:after {
+}
+/* ここまでがheader部分の実装 */
+
+.main-header img {
+/* main画像（白い「Achieve」の文字の画像）部分の実装 */
+}
+
+.about {
+/* About Achieve部分の実装 */
+}
+
+/* ここから */
+.function {
+}
+
+.function-images {
+}
+
+.function-image {
+}
+/* ここまでがfunction部分の実装 */
+
+footer {
+/* footer部分の実装 */
+}
+
+/* ここに書かれているcssの記述はあくまでヒントとして用意された雛形なので、書かれている記述に従わずに実装したいという場合は、自分の好きに実装して構わない。課題要件を満たし、コードの品質が一定の水準にあると判定されればどのような実装でも合格になる。 */
