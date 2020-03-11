@@ -1,7 +1,8 @@
 class Drink
-  def initialize(name, price)
+  attr_reader :name, :count, :price
+  def initialize(name, price, count)
     @name = name
-    @count = 5
+    @count = count
     @price = price
   end
 end
@@ -15,12 +16,15 @@ class VendingMachine
   def initialize
     # 最初の自動販売機に入っている金額は0円
     @slot_money = 0
-    @cola = Drink.new("cola", 120)
+    cola = Drink.new("cola", 120, 5)
+    soda = Drink.new("soda", 120, 5)
+    tea = Drink.new("tea", 100, 5)
+    @menu = {cola: cola, soda: soda, tea: tea}
   end
   #現在の商品在庫を取得できる
   #ゆくゆくは購入時の在庫表示に使用したい
   def current_drinks
-    @cola
+    @menu
   end
   # 投入金額の総計を取得できる。
   def current_slot_money
@@ -36,6 +40,18 @@ class VendingMachine
     # 自動販売機にお金を入れる
     @slot_money += money
   end
+
+  #購入可能なメニューを表示する
+  def purchasable_menu
+    purchasable = []
+    @menu.each_value { |drink|
+      if (current_slot_money > drink.price) && (drink.count > 0)
+        purchasable.push(drink.name)
+      end
+    }
+    "購入可能：#{purchasable}"
+  end
+
   # 払い戻し操作を行うと、投入金額の総計を釣り銭として出力する。
   def return_money
     # 返すお金の金額を表示する
@@ -45,3 +61,6 @@ class VendingMachine
   end
 
 end
+
+vm = VendingMachine.new
+vm.slot_money(1000)
